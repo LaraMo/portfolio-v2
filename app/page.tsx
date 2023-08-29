@@ -34,11 +34,7 @@ export default function Home({
       const res = await fetch(
         "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@laramo",
         {
-          headers: {
-            // Authorization:
-            //   "Bearer 225711e76a1647c5a8589f6113ca341edde5fcb68012b37c0b3962c1d4c0c0172 ",
-            // "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-          },
+          headers: {},
         }
       );
       // The return value is *not* serialized
