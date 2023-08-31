@@ -8,7 +8,6 @@ import Home from "./page";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <html lang="en">

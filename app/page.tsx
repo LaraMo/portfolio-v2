@@ -27,7 +27,6 @@ export default function Home() {
   /**
    * Type
    */
-
   interface ArticleType {
     title: string;
     pubDate: string;
@@ -58,6 +57,7 @@ export default function Home() {
    */
   const [medium, setMedium] = useState<MediumType>();
   const [aboutMeIndex, setAboutMeIndex] = useState(0);
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     async function getMediumData() {
@@ -100,10 +100,10 @@ export default function Home() {
   }, [aboutMeIndex]);
 
   return (
-    <div>
+    <div className={darkMode ? "dark" : ""}>
       <main className="bg-slate-50 text-gray-600 px-10 md:px-20 lg:px-40 dark:bg-dark-primary dark:text-dark-font ">
         {/* Navbar */}
-        {/* <Nav darkMode={darkMode} setDarkMode={setDarkMode} /> */}
+        <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
         <div className="max-w-4xl mx-auto">
           {/* Intro */}
           <section className="pb-20">
