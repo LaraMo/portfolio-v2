@@ -100,7 +100,7 @@ export default function Home() {
   }, [aboutMeIndex]);
 
   return (
-    <div className={darkMode ? "dark" : ""}>
+    <div>
       <main className="bg-slate-50 text-gray-600 px-10 md:px-20 lg:px-40 dark:bg-dark-primary dark:text-dark-font ">
         {/* Navbar */}
         {/* <Nav darkMode={darkMode} setDarkMode={setDarkMode} /> */}
