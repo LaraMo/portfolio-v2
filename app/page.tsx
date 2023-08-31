@@ -184,7 +184,7 @@ export default function Home() {
                       <a
                         href={x.link}
                         key={key}
-                        className="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6 flex justify-center items-center gap-4"
+                        className="max-w-sm w-full bg-white rounded-lg shadow dark:bg-gray-800 p-4 md:p-6 flex justify-center items-center gap-4 hover:bg-zinc-50"
                       >
                         <Image
                           width={100}
