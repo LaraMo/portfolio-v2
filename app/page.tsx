@@ -237,7 +237,7 @@ export default function Home() {
         </div>
       </main>
       {/* Footer */}
-      <footer className="bg-gradient-to-t to-slate-50 from-slate-300 dark:to-dark-primary  dark:from-dark-secondary flex flex-col justify-center gap-4 items-center py-20 text-gray-600 dark:text-dark-font">
+      <footer className="bg-gradient-to-t to-slate-50 from-slate-300 dark:to-dark-primary  dark:from-dark-secondary flex flex-col justify-center gap-4 items-center py-20 px-10 text-gray-600 dark:text-dark-font">
         <h3 className="text-3xl">Get in touch</h3>
         <p className="max-w-2xl">
           If you have any website suggestions, comments and/or if you want to
