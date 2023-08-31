@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        "spin-slow": "spin 7s linear infinite",
+      },
+
       fontFamily: {
         primary: ["Poppins"],
         secondary: ["Satisfy, cursive"],

@@ -245,7 +245,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col justify-center items-center">
           <Image
-            className="hover:animate-spin"
+            className="animate-spin-slow"
             width={500}
             height={500}
             src={contact}
