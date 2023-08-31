@@ -1,8 +1,10 @@
+import { Dispatch, SetStateAction } from "react";
+
 /* Interface */
 export interface InputType {
   label: string;
   value: string;
-  onChange: any;
+  onChange: Dispatch<SetStateAction<string>>;
 }
 export default function Input({ label, value, onChange }: InputType) {
   return (

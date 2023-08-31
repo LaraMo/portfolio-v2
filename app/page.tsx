@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
@@ -27,8 +27,8 @@ export default function Home({
   setDarkMode,
   darkMode,
 }: {
-  setDarkMode: any;
-  darkMode: any;
+  setDarkMode: Dispatch<SetStateAction<boolean>>;
+  darkMode: boolean;
 }) {
   /**
    * Type
@@ -43,7 +43,7 @@ export default function Home({
     thumbnail: string;
     description: string;
     content: string;
-    enclosure: any;
+    enclosure: unknown;
     categories: string[];
   }
   interface MediumType {
