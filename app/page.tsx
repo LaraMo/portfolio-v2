@@ -179,6 +179,7 @@ export default function Home() {
               <>
                 <div className="flex flex-wrap gap-8 justify-center">
                   {medium?.items.slice(0, 3).map((x, key: number) => {
+                    const daysPassed = getDays(x.pubDate);
                     return (
                       <a
                         href={x.link}
@@ -198,7 +199,11 @@ export default function Home() {
                               {x.title}
                             </p>
                             <time className="mb-1 text-sm text-light-accent dark:text-dark-accent font-semibold">
-                              {getDays(x.pubDate)}
+                              {daysPassed === 0
+                                ? "today"
+                                : daysPassed === 1
+                                ? "1 day ago"
+                                : daysPassed + " days ago"}
                             </time>
                           </div>
 
