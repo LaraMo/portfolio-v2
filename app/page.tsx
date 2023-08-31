@@ -23,17 +23,13 @@ import Button from "./components/atoms/Button";
 import Timeline from "./components/molecules/Timeline";
 import { getDays } from "@/src/helper";
 
-/**
- * Interface
- */
-interface HomeType {
-  setDarkMode: Dispatch<SetStateAction<boolean>>;
-  darkMode: boolean;
-}
 export default function Home({
   setDarkMode,
   darkMode,
-}: HomeType) {
+}: {
+  setDarkMode: Dispatch<SetStateAction<boolean>>;
+  darkMode: boolean;
+}) {
   /**
    * Type
    */
@@ -113,7 +109,7 @@ export default function Home({
     <div className={darkMode ? "dark" : ""}>
       <main className="bg-slate-50 text-gray-600 px-10 md:px-20 lg:px-40 dark:bg-dark-primary dark:text-dark-font ">
         {/* Navbar */}
-        <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+        {/* <Nav darkMode={darkMode} setDarkMode={setDarkMode} /> */}
         <div className="max-w-4xl mx-auto">
           {/* Intro */}
           <section className="pb-20">

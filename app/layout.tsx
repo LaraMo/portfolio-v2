@@ -1,13 +1,13 @@
 "use client";
 import "./globals.css";
 import type { Metadata } from "next";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { Inter } from "next/font/google";
 import Home from "./page";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout() {
+export default function RootLayout({ children }: { children: ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
 
   return (
@@ -17,7 +17,7 @@ export default function RootLayout() {
         <link rel="icon" href="icon.png"></link>
       </head>
       <body className={inter.className}>
-        <Home setDarkMode={setDarkMode} darkMode={darkMode} />
+        {children}
       </body>
     </html>
   );
