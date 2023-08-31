@@ -1,23 +1,17 @@
 "use client";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   AiOutlineLinkedin,
   AiOutlineInstagram,
   AiOutlineFacebook,
 } from "react-icons/ai";
 import Image from "next/image";
-import writing from "../public/writing.png";
-import code from "../public/code.png";
 import contact from "../public/contact.png";
-import work from "../public/work.png";
-
 import Me from "./components/me";
 import { aboutMe, codingSkills, workHistory } from "../src/const";
 import IconLink from "./components/atoms/IconLink";
 import Span from "./components/atoms/Span";
 import Nav from "./components/molecules/Nav";
-import ContactMeForm from "./components/organism/ContactMeForm";
-import HTMLReactParser from "html-react-parser";
 import CustomLink from "./components/atoms/Link";
 import Button from "./components/atoms/Button";
 import Timeline from "./components/molecules/Timeline";
@@ -67,17 +61,16 @@ export default function Home() {
           headers: {},
         }
       );
-      // The return value is *not* serialized
-      // You can return Date, Map, Set, etc.
       console.log(res);
 
       if (!res.ok) {
-        // This will activate the closest `error.js` Error Boundary
+        // This will activate the closest `error.js` Error Boundary TODO
         throw new Error("Failed to fetch data");
       }
 
       return res.json();
     }
+
     getMediumData()
       .then((x) => setMedium(x))
       .catch((x) => console.log(x));
@@ -178,7 +171,7 @@ export default function Home() {
           </section>
 
           {/* Technical writing */}
-          <section className="flex flex-col justify-center gap-4 pb-20">
+          <section className="flex flex-col justify-center gap-4">
             <h3 className="first-letter:font-bold first-letter:text-8xl  first-letter:text-light-accent first-letter:dark:text-dark-accent text-xl font-semibold">
               A few articles I wrote
             </h3>
@@ -236,38 +229,36 @@ export default function Home() {
               </>
             )}
           </section>
-
-          {/* Footer */}
-          <footer className="flex flex-col justify-center gap-4 items-center pb-20">
-            <h3 className="text-3xl">Get in touch</h3>
-            <p className="max-w-2xl">
-              If you have any website suggestions, comments and/or if you want
-              to collaborate and/or just to talk :)
-            </p>
-            <div className="flex flex-col justify-center items-center my-10">
-              <Image
-                className="hover:animate-spin"
-                width={500}
-                height={500}
-                src={contact}
-                alt="contact"
-              />
-
-              <Button
-                text="Contact Me"
-                onClick={() => window.open("mailto:laramo1999@gmail.com")}
-              />
-            </div>
-            {/* <ContactMeForm /> */}
-
-            <p className="text-center">
-              💡 Pssst! this website was made with <Span>Next.js</Span>,
-              <Span>Tailwind</Span> and lots of love! - ©
-              {new Date().getFullYear()}
-            </p>
-          </footer>
         </div>
       </main>
+      {/* Footer */}
+      <footer className="bg-gradient-to-t to-slate-50 from-slate-300 dark:to-dark-primary  dark:from-dark-secondary flex flex-col justify-center gap-4 items-center py-20 text-gray-600 dark:text-dark-font">
+        <h3 className="text-3xl">Get in touch</h3>
+        <p className="max-w-2xl">
+          If you have any website suggestions, comments and/or if you want to
+          collaborate and/or just to talk :)
+        </p>
+        <div className="flex flex-col justify-center items-center">
+          <Image
+            className="hover:animate-spin"
+            width={500}
+            height={500}
+            src={contact}
+            alt="contact"
+          />
+
+          <Button
+            text="Contact Me"
+            onClick={() => window.open("mailto:laramo1999@gmail.com")}
+          />
+        </div>
+        {/* <ContactMeForm /> */}
+
+        <p className="text-center">
+          💡 Pssst! this website was made with <Span>Next.js</Span>,
+          <Span>Tailwind</Span> and lots of love! - ©{new Date().getFullYear()}
+        </p>
+      </footer>
     </div>
   );
 }

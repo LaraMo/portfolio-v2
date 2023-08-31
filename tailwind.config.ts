@@ -28,7 +28,7 @@ const config: Config = {
         dark: {
           primary: "#020c1b",
           secondary: "#112240",
-          tertiary: "rgb(87, 123, 193)",
+          tertiary: "rgb(87, 123, 193, 0.5)",
           font: "#e6f1ff",
           accent: "#57cbff",
           border: "cadetblue ",
