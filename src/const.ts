@@ -31,3 +31,25 @@ export const aboutMe = [
   "polyglot",
   "MTL based developer",
 ];
+
+export const workHistory = [
+  {
+    date: "March 2022 - Present",
+    desc: "Code new and existing UI components and suggest improvements",
+    title: "IT Developer @ Ubisoft",
+    learnMore: {
+      text: "Learn More",
+      url: "https://www.ubisoft.com/en-us/help",
+    },
+  },
+  {
+    date: "September 2020 - March 2022",
+    desc: " Developing a mobile app to track maintenance status of aircrafts built using ReactNative.js & Redux.js. In charge of interviewing and onboarding new dev interns",
+    title: " Software Developer @ Bombardier",
+  },
+  {
+    date: "June 2019 - September 2020",
+    title: "Software Developer @ Neptronic",
+    desc: "Implemented new web pages for the in-house business tools using React.js, C#, ASP.NET, and Microsoft SQL Server",
+  },
+];

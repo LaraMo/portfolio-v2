@@ -10,7 +10,7 @@ export default function ContactMeForm() {
   const [comment, setComment] = useState("");
 
   return (
-    <form className="flex flex-1 gap-4 flex-col">
+    <form className="flex gap-4 flex-col">
       <Input label="Name" value={name} onChange={setName} />
       <Input label="Email" value={email} onChange={setEmail} />
       <Textarea label="Comment" value={comment} onChange={setComment} />
