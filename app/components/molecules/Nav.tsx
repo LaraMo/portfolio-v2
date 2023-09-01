@@ -1,17 +1,16 @@
-"use client"; // This is a client component 👈🏽
+"use client";
 import { Dispatch, SetStateAction } from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import CustomLink from "../atoms/Link";
+import CustomLink from "../atoms/CustomLink";
 
-export default function Nav({
-  setDarkMode,
-  darkMode,
-}: {
+/* Props */
+type NavProps = {
   setDarkMode: Dispatch<SetStateAction<boolean>>;
   darkMode: boolean;
-}) {
+};
+export default function Nav({ setDarkMode, darkMode }: NavProps) {
   return (
-    <nav className="py-10 flex justify-between gap-10 items-center flex-col sm:flex-row">
+    <nav className=" px-10 md:px-20 lg:px-40 py-10 flex justify-between gap-10 items-center flex-col sm:flex-row">
       <h1 className="text-xl font-secondary">Developed by LaraMo</h1>
       <div className="flex items-center">
         <BsFillMoonStarsFill

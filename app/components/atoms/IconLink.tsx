@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-/* Interface */
-interface IconLinkType {
+/* Props */
+type IconLinkProps = {
   children: ReactNode;
   href: string;
-}
-export default function IconLink({ children, href }: IconLinkType) {
+};
+export default function IconLink({ children, href }: IconLinkProps) {
   return (
     <a
       className="cursor-pointer accent-light-font dark:accent-dark-accent"

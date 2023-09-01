@@ -1,17 +1,15 @@
-import Link from "next/link";
-
-/* Interface */
-interface LinkType {
+/* Props */
+type CustomLinkProps = {
   url: string;
   text: string;
   className?: string;
-}
+};
 
 /**
  * CustomLink
  * @param LinkType
  */
-export default function CustomLink({ url, text, className }: LinkType) {
+export default function CustomLink({ url, text, className }: CustomLinkProps) {
   return (
     <a
       href={url}

@@ -1,8 +1,6 @@
-import CustomLink from "../atoms/Link";
-/**
- * Interface
- */
-interface TimelineType {
+import CustomLink from "../atoms/CustomLink";
+/* Props */
+type TimelineProps = {
   date: string;
   desc: string;
   title: string;
@@ -10,8 +8,8 @@ interface TimelineType {
     url: string;
     text: string;
   };
-}
-export default function Timeline({ events }: { events: TimelineType[] }) {
+};
+export default function Timeline({ events }: { events: TimelineProps[] }) {
   return (
     <ol className="relative border-l border-gray-700 dark:text-dark-font dark:border-gray-200 max-w-3xl">
       {events.map((event, key) => {

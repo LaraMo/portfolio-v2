@@ -1,13 +1,13 @@
 "use client";
-import "./globals.css";
-import type { Metadata } from "next";
 import { ReactNode, useState } from "react";
-import { Inter } from "next/font/google";
-import Home from "./page";
+import { Poppins } from "next/font/google";
+import "./globals.css";
+import Nav from "./components/molecules/Nav";
 
-const inter = Inter({ subsets: ["latin"] });
+const poppins = Poppins({ weight: "500", subsets: ["devanagari"] });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const [darkMode, setDarkMode] = useState(false);
 
   return (
     <html lang="en">
@@ -15,8 +15,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <title>Lara Mo</title>
         <link rel="icon" href="icon.png"></link>
       </head>
-      <body className={inter.className}>
-        {children}
+      <body className={poppins.className}>
+        <div className={darkMode ? "dark" : ""}>
+          <div className="bg-slate-50 text-gray-600 dark:bg-dark-primary dark:text-dark-font">
+            <Nav darkMode={darkMode} setDarkMode={setDarkMode} />
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

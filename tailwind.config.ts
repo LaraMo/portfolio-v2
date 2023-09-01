@@ -14,7 +14,6 @@ const config: Config = {
       },
 
       fontFamily: {
-        primary: ["Poppins"],
         secondary: ["Satisfy, cursive"],
       },
       // boxShadow: {

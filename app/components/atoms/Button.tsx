@@ -1,12 +1,10 @@
-/**
- * Interface
- */
-interface ButtonType {
+/* Props */
+type ButtonProps = {
   text: string;
   onClick: VoidFunction;
-}
+};
 
-export default function Button({ text, onClick }: ButtonType) {
+export default function Button({ text, onClick }: ButtonProps) {
   return (
     <button
       onClick={onClick}
