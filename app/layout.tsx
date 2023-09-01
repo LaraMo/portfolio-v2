@@ -4,7 +4,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Nav from "./components/molecules/Nav";
 
-const poppins = Poppins({ weight: "500", subsets: ["devanagari"] });
+const poppins = Poppins({ weight: "400", subsets: ["devanagari"] });
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
