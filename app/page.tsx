@@ -9,8 +9,8 @@ import Span from "./components/atoms/Span";
 import Timeline from "./components/molecules/Timeline";
 import Articles from "./components/organism/Articles";
 import AboutMe from "./components/AboutMe";
-import Me from "./components/Me";
 import Footer from "./components/organism/Footer";
+import Me from "./components/me";
 
 export default function Home() {
   return (
